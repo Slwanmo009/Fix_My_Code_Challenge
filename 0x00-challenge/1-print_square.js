@@ -13,10 +13,10 @@ if (process.argv.length <= 2) {
     process.exit(1);
 }
 
-const size = parseInt(process.argv[2]);
+const size = parseInt(process.argv[2], 10);
 
 if (isNaN(size) || size <= 0) {
-    process.stderr.write("Size must be a positive integer\n");
+    process.stderr.write("Invalid size argument. It must be a positive integer.\n");
     process.exit(1);
 }
 
